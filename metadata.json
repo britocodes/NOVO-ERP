@@ -1,0 +1,8 @@
+{
+  "name": "Remix: publicar esse",
+  "description": "MOBILE, WEB, PC",
+  "requestFramePermissions": [
+    "camera",
+    "usb"
+  ]
+}

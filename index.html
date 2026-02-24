@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERP Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.292.0",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "jszip": "https://esm.sh/jszip@3.10.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.43.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "posthog-js": "https://esm.sh/posthog-js@1.144.1"
+  }
+}
+</script>
+<style>
+  :root {
+    --font-size-dynamic: 16px; 
+  }
+
+  html.theme-light {
+    --color-bg: #f4f7fa;
+    --color-surface: #ffffff;
+    --color-surface-secondary: #f8f9fa;
+    --color-surface-tertiary: #e9ecef;
+    --color-border: #dee2e6;
+    --color-text-primary: #212529;
+    --color-text-secondary: #6c757d;
+    --color-text-inverted: #ffffff;
+    --card-bg: var(--color-surface);
+    --card-border: var(--color-border);
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    --color-success-bg: #e6f7f0;
+    --color-success-border: #b3e6d1;
+    --color-success-text: #0d6b42;
+    --color-warning-bg: #fff8e6;
+    --color-warning-border: #ffecb3;
+    --color-warning-text: #8a6300;
+    --color-danger-bg: #fde8e8;
+    --color-danger-border: #facdcd;
+    --color-danger-text: #c51f1f;
+    --color-info-bg: #e7f5ff;
+    --color-info-border: #bce1ff;
+    --color-info-text: #00529b;
+    --modal-bg: var(--color-surface);
+  }
+
+  html.theme-dark {
+    --color-bg: #111827;
+    --color-surface: #1f2937;
+    --color-surface-secondary: #374151;
+    --color-surface-tertiary: #4b5563;
+    --color-border: #374151;
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #9ca3af;
+    --color-text-inverted: #111827;
+    --card-bg: var(--color-surface);
+    --card-border: var(--color-border);
+    --color-success-bg: #14532d;
+    --color-warning-bg: #78350f;
+    --color-danger-bg: #991b1b;
+    --color-info-bg: #1e40af;
+    --modal-bg: var(--color-surface);
+  }
+  
+  html.accent-indigo { --color-primary: #4f46e5; --color-primary-text: #ffffff; }
+  html.accent-emerald { --color-primary: #059669; --color-primary-text: #ffffff; }
+  html.accent-fuchsia { --color-primary: #c026d3; --color-primary-text: #ffffff; }
+  html.accent-orange { --color-primary: #f97316; --color-primary-text: #ffffff; }
+  html.accent-slate { --color-primary: #64748b; --color-primary-text: #ffffff; }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-dynamic);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+  .animate-shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  table thead {
+    background-color: #1f2937 !important;
+  }
+  table thead th {
+    color: #f9fafb !important;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx" crossorigin></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
